@@ -1,5 +1,7 @@
 # docker-polynote
 
+[![Build Status](https://travis-ci.com/ahlaw/docker-polynote.svg?branch=master)](https://travis-ci.com/ahlaw/docker-polynote)
+
 *Unofficial* docker image for [polynote](https://polynote.org/).
 
 ## Usage

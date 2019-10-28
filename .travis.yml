@@ -9,3 +9,12 @@ install:
 
 after_script:
   - docker images
+
+before_deploy:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+deploy:
+  provider: script
+  script: docker push ahlaw/polynote
+  on:
+    branch: master
