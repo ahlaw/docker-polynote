@@ -1,6 +1,7 @@
 # docker-polynote
 
 [![Build Status](https://travis-ci.com/ahlaw/docker-polynote.svg?branch=master)](https://travis-ci.com/ahlaw/docker-polynote)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/ahlaw/polynote)](https://hub.docker.com/r/ahlaw/polynote/builds)
 
 *Unofficial* docker image for [polynote](https://polynote.org/).
 
