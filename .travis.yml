@@ -7,7 +7,7 @@ before_script:
   - docker pull ahlaw/polynote || true
 
 script:
-  - docker build --pull --cache-from ahlaw/polynote -t ahlaw/polynote .
+  - bash scripts/build.sh
   - docker run -d -p 8192:8192 ahlaw/polynote
 
 after_script:

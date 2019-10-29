@@ -7,7 +7,6 @@ VERSION="$( cat $DIR/../VERSION )"
 
 docker build \
     --pull \
-    --cache-from $IMAGE_NAME \
+    --cache-from ahlaw/polynote \
     --build-arg POLYNOTE_VERSION=$VERSION \
-    -f $DOCKERFILE_PATH \
-    -t $IMAGE_NAME .
+    -t ahlaw/polynote .
