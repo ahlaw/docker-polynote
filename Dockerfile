@@ -1,4 +1,5 @@
 FROM ubuntu:18.04
+LABEL maintainer="amos.law98@gmail.com"
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 
@@ -17,7 +18,8 @@ RUN pip3 install \
 
 WORKDIR /opt
 
-ENV RELEASE_URL https://github.com/polynote/polynote/releases/download/0.2.8/polynote-dist.tar.gz
+ARG POLYNOTE_VERSION=0.2.8
+ENV RELEASE_URL https://github.com/polynote/polynote/releases/download/${POLYNOTE_VERSION}/polynote-dist.tar.gz
 
 RUN curl -L $RELEASE_URL | tar -zxvpf -
 

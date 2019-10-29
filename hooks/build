@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+VERSION="0.2.8"
+
+docker build --build-arg POLYNOTE_VERSION=$VERSION .
