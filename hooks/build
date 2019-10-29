@@ -3,4 +3,9 @@ set -ex
 
 VERSION="0.2.8"
 
-docker build --build-arg POLYNOTE_VERSION=$VERSION -f $DOCKERFILE_PATH -t $IMAGE_NAME .
+docker build \
+    --pull \
+    --cache-from $IMAGE_NAME \
+    --build-arg POLYNOTE_VERSION=$VERSION \
+    -f $DOCKERFILE_PATH \
+    -t $IMAGE_NAME .
