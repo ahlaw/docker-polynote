@@ -1,14 +1,22 @@
 language: minimal
 
+env:
+  matrix:
+    - IMAGE_NAME=ahlaw/polynote
+      IMAGE_DIR=polynote
+    - IMAGE_NAME=ahlaw/polynote-spark
+      IMAGE_DIR=polynote-spark
+
 services:
   - docker
 
 before_script:
-  - docker pull ahlaw/polynote || true
+  - cd ${TRAVIS_BUILD_DIR}/${IMAGE_DIR}
+  - docker pull $IMAGE_NAME || true
 
 script:
-  - bash scripts/build.sh
-  - docker run -d -p 8192:8192 ahlaw/polynote
+  - docker build --rm --pull --cache-from $IMAGE_NAME -t $IMAGE_NAME .
+  - docker run -d -p 8192:8192 $IMAGE_NAME
 
 after_script:
   - docker images

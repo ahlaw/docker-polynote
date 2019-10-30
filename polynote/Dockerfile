@@ -21,7 +21,7 @@ RUN pip install \
 
 WORKDIR /opt
 
-ARG POLYNOTE_VERSION
+ARG POLYNOTE_VERSION=0.2.9
 ENV RELEASE_URL https://github.com/polynote/polynote/releases/download/${POLYNOTE_VERSION}/polynote-dist.tar.gz
 
 RUN curl -L $RELEASE_URL | tar -zxvpf -

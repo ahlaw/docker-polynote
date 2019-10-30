@@ -1,9 +1,9 @@
-# docker-polynote
-
 [![Build Status](https://travis-ci.com/ahlaw/docker-polynote.svg?branch=master)](https://travis-ci.com/ahlaw/docker-polynote)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/ahlaw/polynote)](https://hub.docker.com/r/ahlaw/polynote/builds)
 
-*Unofficial* docker image for [polynote](https://polynote.org/).
+# docker-polynote
+
+*Unofficial* docker image for [Polynote](https://polynote.org/).
 
 ## Installation
 
@@ -13,17 +13,17 @@ Pull the image from the Docker repository.
 docker pull ahlaw/polynote
 ```
 
-## Build
-
-To build from source, you have to specify the current Polynote version as a build argument:
+Alternatively, pull the following image for Spark and PySpark support.
 
 ```
-docker build --rm --build-arg POLYNOTE_VERSION="0.2.9" -t ahlaw/polynote .
+docker pull ahlaw/polynote-spark
 ```
+
+All further examples will use the base image name but should be replaced if with the Spark version if desired.
 
 ## Usage
 
-This command starts a container running a Polynote server and exposes the server on host port 8192. Access Polynote application on the browser at http://localhost:8192
+This command starts a container running a Polynote server and exposes the server on host port 8192. Polynote application can be accessed on the browser at http://localhost:8192
 
 ```
 docker run -p 8192:8192 ahlaw/polynote
@@ -64,6 +64,22 @@ If the above does not suit your needs, you can start a shell in the container an
 docker exec --it container_name /bin/bash
 pip install numpy
 ```
+
+## Versioning
+
+The docker image follows the latest [Polynote release](https://github.com/polynote/polynote). 
+
+### Base Polynote Image
+
+* JDk 8
+* Python 3.6
+
+### Spark Polynote Image
+
+* Apache Spark 2.4.4
+* Hadoop 2.7
+
+The latest version of all python packages in the image was installed.
 
 ## License
 
