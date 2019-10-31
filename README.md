@@ -1,3 +1,14 @@
+# WARNING: This repository is no longer maintained
+
+> An official docker image for Polynote has been released. As such, this repository will not be updated. The repository will be kept available in read-only mode.
+
+## Links
+
+* [Polynote Github Repo](https://github.com/polynote/polynote)
+* [Official Polynote Docker Image](https://hub.docker.com/r/polynote/polynote)
+* [Polynote Homepage](https://polynote.org/)
+
+
 [![Build Status](https://travis-ci.com/ahlaw/docker-polynote.svg?branch=master)](https://travis-ci.com/ahlaw/docker-polynote)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/ahlaw/polynote)](https://hub.docker.com/r/ahlaw/polynote/builds)
 
